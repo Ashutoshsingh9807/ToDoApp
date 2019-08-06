@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## ToDoApp
+ToDoApp is storing and fethcing data from the Firebase.
+
+## To Add new To Do in list
+To add new to do in list click on the bottom plus bottom it will open new slide box there is a text box name "Please add your list here" you can enter you list there and click on plus button for closing popup window again click on the cross button on the top right side.

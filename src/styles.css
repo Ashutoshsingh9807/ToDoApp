@@ -1,1 +1,156 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f6f7fc;
+}
+
+.add-icon-btn .d-block {
+    padding: 7px 12px;
+    background-color: #e9ecef;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.bg-app.jumbotron {
+    background-image: linear-gradient(to right bottom, #900361, #79176c, #5d2272, #3d2974, #082c71);
+    background-image:url('../src/assets/bg-app.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color:#fff;
+}
+.bg-app.jumbotron::after {
+    content: '';
+    background-image: linear-gradient(to right bottom, #900361, #79176c, #5d2272, #3d2974, #082c71);
+    filter: blur(8px);
+    -webkit-filter: blur(25px);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: absolute;
+    opacity: 0.5;
+    left: 0;
+}
+.bg-app.jumbotron h4 {
+    z-index:99;
+    font-size: 33px;
+    text-shadow: 4px 2px 5px #5e3186;
+}
+.todo-title {
+    max-width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+}
+.btn-top-custom  {
+    bottom: -6px;
+    border-radius: 50px;
+    z-index: 99;
+    padding: 8px 28px;
+    box-shadow: 1px 6px 10px rgba(194, 179, 179, 0.69);
+    right: 18px;
+    text-transform: uppercase;
+    font-size: 13px;
+    background-color: #ec1a65;
+}
+.shadowed-div {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 50%;
+    max-width: 540px;
+    transform: translateX(-50%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.shadowed-div::after {
+    content: '';
+    background-color: #fff;
+    opacity: 0.8;
+    height: calc(100% + 50px);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    filter: blur(8px);
+}
+.add-icon-btn {
+    z-index: 1;
+    position: relative;
+    padding: 10px;
+    padding: 24px 0px;
+}
+.list-wrapper {
+padding-bottom: 109px;
+}
+.list-wrapper .list-group-item {
+    border-color: #ecebeb;
+}
+.list-wrapper .list-group-item span:first-of-type i {
+    color:#ccc;
+}
+.list-wrapper .list-group-item span:first-of-type i.fa-check-circle {
+    color:#6642ee;
+}
+.btn-todo-wrapper {
+    z-index:1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+ }
+.btn-todo-wrapper a {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    line-height: 35px;
+    font-size: 21px;
+    box-shadow: 9px -1px 49px #9c9ea8;
+    margin-bottom: 10px;
+    outline: none;
+  }
+  .shadowed-div .add-icon-btn {
+    display: none;
+  }
+  .btn-open-todo {
+      color:#fff!important;
+  }
+  .add-icon-btn .form-control {
+    width: calc(100% - 39px);
+    display: inline-block;
+    border-color: #6642ee;
+    border-radius: 50px;
+    border-width: 1.5px;
+}
+.add-icon-btn .form-control:focus {
+    box-shadow: none;
+}
+.add-icon-btn .plus-icon-wrapper {
+    height: 38px;
+    vertical-align: top;
+    min-height: 100%;
+    background-color: #6642ee;
+    width: 39px;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+  /*showing the toggle */
+  .shadowed-div.show-toggle {
+    background-color: #fff;
+    box-shadow: 3px -9px 20px #ccc;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+  }
+  .shadowed-div.show-toggle .add-icon-btn {
+    display: block;
+  }
+  .shadowed-div.show-toggle .btn-todo-wrapper {
+    z-index: 1;
+    position: absolute!important;
+    top: -29px;
+    right: 10px;
+    transform: rotate(45deg);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }

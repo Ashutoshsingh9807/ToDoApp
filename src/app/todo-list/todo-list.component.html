@@ -1,0 +1,30 @@
+<div class="jumbotron bg-app rounded-0 position-relative">
+  <h4 class="text-center position-relative">To do app!</h4>
+  <a href="#" class="btn btn-danger position-absolute btn-top-custom">Complted</a>
+</div>
+
+
+<div class="list-wrapper">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item list-group-item-action" *ngFor="let item of toDoListArray">
+      <span class="hover-cursor d-inline-block align-top" [class.text-success]="item.isChecked" (click)="alterCheck(item.$key,item.isChecked)">
+          <i class="far" [ngClass]="item.isChecked?'fa-check-circle':'fa-circle'"></i>
+      </span>
+     <span class="todo-title d-inline-block"> {{item.title}} </span>
+      <span class="cursor-pointer text-danger float-right" (click)="onDelete(item.$key)">
+          <i class="fas fa-trash"></i>
+      </span>
+    </li>
+  </ul>
+</div>
+<div class="shadowed-div" [class.show-toggle] = "showToggle">
+  <div class="input-group add-icon-btn">
+    <input type="text" class="form-control" placeholder="Please add your list here" #itemTitle/> 
+    <div class="plus-icon-wrapper d-inline-block" (click)="onAdd(itemTitle)">
+      <i class="fas fa-plus"></i> 
+    </div>
+  </div>
+  <div class="btn-todo-wrapper text-center position-relative">
+      <a class="btn btn-danger btn-open-todo" (click)="showToggleFun()"><i class="fas fa-plus"></i></a>
+  </div>
+</div>
